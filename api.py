@@ -1,12 +1,7 @@
 from datasets import Dataset
 import torch
-from torch.optim import AdamW
 from tqdm import tqdm
-import numpy as np
 from datasets_generator import get_test_data, get_training_data
-from sklearn.metrics import accuracy_score, precision_recall_fscore_support
-from transformers.data.metrics import simple_accuracy
-from sklearn.metrics import f1_score
 
 
 class MethodsDataset(torch.utils.data.Dataset):
@@ -30,6 +25,8 @@ def get_tokenized_datasets(tokenizer):
     test_dict = get_test_data()
     train_dict['label'] = train_dict['label'][:1024]
     train_dict['text'] = train_dict['text'][:1024]
+    test_dict['label'] = test_dict['label'][:128]
+    test_dict['text'] = test_dict['text'][:128]
 
     train_dataset = Dataset.from_dict({'text': train_dict['text'], 'label': train_dict['label']})
     test_dataset = Dataset.from_dict({'text': test_dict['text'], 'label': test_dict['label']})
