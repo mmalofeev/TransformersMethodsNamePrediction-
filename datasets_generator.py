@@ -9,8 +9,8 @@ def extract_methods_from_files(path, number_of_files):
 
 
 def get_training_data():
-    java_training_path = "../data/java-small/training/gradle"
-    python_training_path = "./data/java-small/training/gradle"
+    java_training_path = "../java-small/training/gradle"
+    python_training_path = "./java-small/training/gradle"
     extract_methods_from_files(java_training_path, 400)
     with open(python_training_path + '/methods.txt', 'r') as training_file:
         training_dict = {'label': [], 'text': []}
@@ -31,8 +31,8 @@ def get_training_data():
 
 
 def get_test_data():
-    java_test_path = "../data/java-small/validation/libgdx"
-    python_test_path = "./data/java-small/validation/libgdx"
+    java_test_path = "../java-small/validation/libgdx"
+    python_test_path = "./java-small/validation/libgdx"
     extract_methods_from_files(java_test_path, 100)
     with open(python_test_path + '/methods.txt', 'r') as training_file:
         test_dict = {'label': [], 'text': []}
