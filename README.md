@@ -9,6 +9,8 @@ dataset to predict Java methods' names.
 ### Requirements
 * `pip install transformers`
 * `pip install torch`
+* `pip install tqdm`
+* `pip install datasets`
 
 ### Running guide
 1. `git clone https://github.com/mmalofeev/TransformersMethodsNamePrediction-.git`
