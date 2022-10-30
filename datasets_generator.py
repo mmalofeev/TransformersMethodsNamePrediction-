@@ -31,9 +31,10 @@ def get_training_data():
 
 
 def get_test_data():
-    test_path = "/Users/mdmalofeev/Documents/programm/thesis/transformers/data/java-small/validation/libgdx"
-    extract_methods_from_files(test_path, 100)
-    with open(test_path + '/methods.txt', 'r') as training_file:
+    java_test_path = "../data/java-small/validation/libgdx"
+    python_test_path = "./data/java-small/validation/libgdx"
+    extract_methods_from_files(java_test_path, 100)
+    with open(python_test_path + '/methods.txt', 'r') as training_file:
         test_dict = {'label': [], 'text': []}
         codelines = training_file.readlines()
         index = 0
