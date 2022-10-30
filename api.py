@@ -23,6 +23,7 @@ def tokenize(batch):
 def get_tokenized_datasets(tokenizer):
     train_dict = get_training_data()
     test_dict = get_test_data()
+
     train_dict['label'] = train_dict['label'][:1024]
     train_dict['text'] = train_dict['text'][:1024]
     test_dict['label'] = test_dict['label'][:128]
