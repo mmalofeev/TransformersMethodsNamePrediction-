@@ -26,8 +26,8 @@ def get_tokenized_datasets(tokenizer):
 
     train_dict['label'] = train_dict['label'][:1024]
     train_dict['text'] = train_dict['text'][:1024]
-    test_dict['label'] = test_dict['label'][:128]
-    test_dict['text'] = test_dict['text'][:128]
+#    test_dict['label'] = test_dict['label'][:128]
+#    test_dict['text'] = test_dict['text'][:128]
 
     train_dataset = Dataset.from_dict({'text': train_dict['text'], 'label': train_dict['label']})
     test_dataset = Dataset.from_dict({'text': test_dict['text'], 'label': test_dict['label']})

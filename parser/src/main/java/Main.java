@@ -67,6 +67,8 @@ public class Main {
     public static void main(String[] args) throws Exception {
         String sourceDirName = args[0];
         int numberOfFilesProcessing = Integer.parseInt(args[1]);
+//         String sourceDirName = "../java-small/test"
+//         int numberOfFilesProcessing = 100;
         File sourceDir = new File(sourceDirName);
         List<File> files = getFilesFromDirectory(sourceDir, numberOfFilesProcessing);
         try (FileOutputStream fileOutputStream = new FileOutputStream(sourceDirName + "/methods.txt")) {

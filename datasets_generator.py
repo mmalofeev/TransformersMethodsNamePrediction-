@@ -33,8 +33,8 @@ def get_training_data():
 
 
 def get_test_data():
-    java_test_path = "../java-small/validation/libgdx"
-    python_test_path = "./java-small/validation/libgdx"
+    java_test_path = "../java-small/test"
+    python_test_path = "./java-small/test"
     extract_methods_from_files(java_test_path, 100)
     time.sleep(5)
     with open(python_test_path + '/methods.txt', 'r') as training_file:
