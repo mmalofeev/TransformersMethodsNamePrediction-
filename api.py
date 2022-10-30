@@ -16,10 +16,6 @@ class MethodsDataset(torch.utils.data.Dataset):
         return len(self.encodings.input_ids)
 
 
-def tokenize(batch):
-    return tokenizer(batch['text'], padding=True, truncation=True, max_length=512)
-
-
 def get_tokenized_datasets(tokenizer):
     train_dict = get_training_data()
     test_dict = get_test_data()

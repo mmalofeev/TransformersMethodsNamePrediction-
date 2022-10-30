@@ -39,7 +39,9 @@ If nothing above wouldn't help, please contact me on Telegram
 
 ## Results
 I was training models on 1024 methods due to low computing ability 
-of my laptop.
+of my laptop. Training takes about 1.5 hours on Macbook Air M1(2020) because
+transformers' self-attention layer has O(n^2) complexity 
+where n is number of tokens in input text. 
 ### codebert-base-mlm
 * Results of predictions before training
 ![img.png](pics/codebert-before.png)
@@ -50,3 +52,7 @@ of my laptop.
 ![img.png](pics/codebert-small-before.png)
 * Results of predictions after training
 ![img.png](pics/codebert-small-after.png)
+
+As we can see model's fine-tuning give a lot of benefit 
+and prediction results become a lot better than it was 
+on pretrained model.
