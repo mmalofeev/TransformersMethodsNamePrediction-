@@ -50,5 +50,3 @@ def get_test_data():
             test_dict['text'].append(masked_method_code)
     return test_dict
 
-
-print(get_test_data())
